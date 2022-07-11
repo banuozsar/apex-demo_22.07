@@ -1,6 +1,6 @@
 //Created on 2022.07.11
 @isTest
-public class MatchAccountOwnerTest {
+public class MatchAccountOwner {
     @isTest static void createContact() {
         Account acc = new Account();
         acc.Name = 'acc';
