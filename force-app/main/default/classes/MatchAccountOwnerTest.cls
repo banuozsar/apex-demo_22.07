@@ -3,12 +3,12 @@
 public class MatchAccountOwnerTest {
     @isTest static void createContact() {
         Account acc = new Account();
-        acc.Name = 'acc';
+        acc.Name       = 'acc';
         insert acc;
         
         Contact myCon = new Contact();
         myCon.LastName ='LastName';
-        myCon.Account = acc;
+        myCon.Account  = acc;
         insert myCon;
     }
 }

@@ -36,13 +36,13 @@ trigger CheckSensitiveInfoWithFoundKeywords on Case (after insert, before update
     List<Case> casesToCreate = new List<Case>();
     for (Id id : keywordsByCaseId.keySet()) {
         String keywords = String.join(keywordsByCaseId.get(id), ',');
-        Case childCase        = new Case();
-        childCase.Subject     = childCaseSubject;
-        childCase.ParentId    = id;
-        childCase.IsEscalated = true;
-        childCase.Priority    = 'High';
+        Case childCase           = new Case();
+        childCase.Subject        = childCaseSubject;
+        childCase.ParentId       = id;
+        childCase.IsEscalated    = true;
+        childCase.Priority       = 'High';
         Integer numberOfKeywords = keywordsByCaseId.get(id).size();
-        childCase.Description = numberOfKeywords + (numberOfKeywords >= 2 ? ' keywords were' : ' keyword was') + ' found ' + keywords;
+        childCase.Description    = numberOfKeywords + (numberOfKeywords >= 2 ? ' keywords were' : ' keyword was') + ' found ' + keywords;
         casesToCreate.add(childCase);
     }
     insert casesToCreate;
