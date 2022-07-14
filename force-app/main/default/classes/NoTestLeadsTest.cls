@@ -3,7 +3,7 @@
 public class NoTestLeadsTest {
 
     @isTest static void createLead() {
-        Lead myLead = new Lead();
+        Lead myLead      = new Lead();
         myLead.FirstName = 'Banu';
         myLead.LastName  = 'test';
         myLead.Company   = 'DreamForce';

@@ -4,9 +4,9 @@
 public class ComparableOppsTest {
         @isTest static void noComparableOpps() {
                 //Create records
-                Account acc  = new Account();
-                acc.Name     = 'New Acc';
-                acc.Industry = 'Hospitality';
+                Account acc     = new Account();
+                acc.Name        = 'New Acc';
+                acc.Industry    = 'Hospitality';
                 insert acc;
 
                 Opportunity opp = new Opportunity();
