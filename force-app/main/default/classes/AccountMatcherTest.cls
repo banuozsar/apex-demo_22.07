@@ -2,8 +2,8 @@
 
 @isTest
 public class AccountMatcherTest {
-
-    @istest static void noAccountMatch {
+    
+    @istest static void noAccountMatch() {
         Contact con        = new Contact();
         con.LastName       = 'contact';
         con.Email          = 'contact@xmail.com';
@@ -15,13 +15,12 @@ public class AccountMatcherTest {
         System.assertEquals(null, updatedCon.AccountId);
     }
 
-    @istest static void accountMatchFound {
+    @istest static void accountMatchFound() {
         String domain = 'xxxy.com';
 
         //Create records
         Account acc        = new Account();
         acc.Name           = 'acc';
-        acc.BillingCountry = country;
         acc.Website        = 'www.'+ domain;
         insert acc;
 
