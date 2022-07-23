@@ -38,4 +38,4 @@ public class UpdateContactPhoneTest {
         System.assertEquals(phone, cons.get(0).OtherPhone);
         System.assertEquals(null, cons.get(1).OtherPhone);
     }
-} 
+}
